@@ -1,0 +1,56 @@
+@charset "UTF-8";
+.indexCase .items{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.indexCase .items>div{
+	width: 30%;
+	margin: 20px 0;
+}
+.indexCase .items a{
+	transition: .5s ease-out;
+}
+.indexCase .items a .text h5{
+	padding-top: 3px;
+	color: #0f8cee;
+}
+.indexCase .items a .text h5:before{
+	content:'';
+	width: 10px;
+    height: 1px;
+    background: #0f8cee;
+    margin-right: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+    transition: all .4s ease-in-out;
+}
+.indexCase .items a .img{
+	overflow: hidden;
+	border: 1px solid rgba(255,255,255,.2);
+	background: #000;
+}
+.indexCase .items a .img img{
+	opacity: 0.8;
+	transform: scale(1);
+	transition: 3s ease-out;
+}
+.indexCase .items a:hover h5:before{
+	width: 30px;
+}
+.indexCase .items a:hover .img img{
+	transform: scale(1.1);
+	opacity: 1;
+}
+@media (max-width: 920px) {
+	.indexCase .items>div{
+		width: 48%;
+	}
+}
+@media (max-width: 620px) {
+	.indexCase .items>div{
+		width: 100%;
+	}
+}
+
